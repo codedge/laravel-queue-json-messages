@@ -1,0 +1,64 @@
+{
+    "name": "codedge/laravel-queue-json-messages",
+    "description": "Dispatching queue jobs in json format only.",
+    "license": "MIT",
+    "keywords": [
+      "laravel",
+      "laravel package",
+      "package",
+      "queue",
+      "json"
+    ],
+    "support": {
+      "issues": "https://github.com/codedge/laravel-queue-json-messages/issues",
+      "source": "https://github.com/codedge/laravel-queue-json-messages"
+    },
+    "authors": [
+      {
+        "name": "Holger Lösken",
+        "email": "post@codedge.de",
+        "homepage": "https://www.codedge.de",
+        "role": "Developer"
+      }
+    ],
+    "autoload": {
+      "psr-4": {
+        "Codedge\\QueueJsonMessage\\": "src/"
+      }
+    },
+    "autoload-dev": {
+      "psr-4": {
+        "Codedge\\QueueJsonMessage\\Tests\\": "tests/"
+      }
+    },
+    "config": {
+      "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "extra": {
+      "laravel": {
+        "providers": [
+          "Codedge\\QueueJsonMessage\\QueueJsonMessageServiceProvider"
+        ],
+        "aliases": {
+          "Updater": "Codedge\\QueueJsonMessage\\Facade\\QueueJsonMessage"
+        }
+      }
+    },
+    "require": {
+      "php": ">=7.3",
+      "ext-json": "*",
+      "laravel/framework": "^6.0|^7.0"
+    },
+    "require-dev": {
+      "dg/bypass-finals": "^1.1",
+      "mockery/mockery": "^1.3",
+      "orchestra/testbench": "^4.0|^5.0",
+      "phpunit/phpunit": "^8.4|^9.0"
+    },
+    "scripts": {
+      "test": "./vendor/bin/phpunit"
+    }
+  }
+  
